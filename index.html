@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7d05ea1717.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" alt="logo" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm <span>pradeep</span><br> from India</h1>
+            </div>
+        </div>
+    </div>
+
+<!--About-->
+<div id ="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user1.jpg" alt="user">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi, my name is Pradeep and I'm a frontend developer. I specialize in creating beautiful and functional user interfaces using HTML, CSS, and JavaScript. With 1 year of experience, I've worked on a variety of projects, ranging from simple landing pages to complex web applications. I'm passionate about learning new technologies and staying up-to-date with the latest design trends. As a developer, I believe in creating intuitive and user-friendly interfaces that enhance the user experience.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                    <li><span>UI?UX</span><br>Desigining Web/App interface</li>
+                    <li><span>Web Development</span><br>Web app development</li>
+                    <li><span>App Development</span><br>Building Andriod/IOS apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                    <li><span>Udemy</span><br>Completed Full stack web-devoplment Bootcamp</li>
+                    <li><span>coursera</span><br>Completed UI/UX Course</li>
+                    <li><span>NPTEL</span><br>Completed Python</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                    <li><span>UI?UX</span><br>Desigining Web/App interface</li>
+                    <li><span>UI?UX</span><br>Desigining Web/App interface</li>
+                    <li><span>UI?UX</span><br>Desigining Web/App interface</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-------services------->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Web design services involve the creation and development of visually appealing, user-friendly, and responsive websites that are tailored to meet the specific needs of businesses or individuals. A web designer may work alone or as part of a team to design, build, and maintain websites.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX Design</h2>
+                <p>UI/UX design refers to the process of designing the user interface and user experience of a website, application, or digital product. UI (user interface) design focuses on the visual aspects of a product, while UX (user experience) design concentrates on the overall experience a user has when interacting with the product.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <h2>App Design</h2>
+                <p>App design refers to the process of designing the visual interface and user experience of a mobile application. App design can have a significant impact on the success of the app, as it plays a critical role in attracting and retaining users.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----portfolio----->
+<div id="portfolio">
+    <div class="container">My Work</div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
